@@ -99,6 +99,28 @@ https://dashboard.selfnet.de/
 https://selfnet-status.de/
 
 ---
+# L3 by Design
+
+Jeder Nutzer bekommt ein **/28-Subnetz**. Nicht eine IP - ein Subnetz.
+
+Alle Geräte NATten auf **eine externe IPv4**.
+Statisches Mapping. Kein Connection-Logging nötig.
+
+So können wir Abuse zuordnen, ohne zu beobachten, was Leute tun.
+
+---
+# Selfnet in a Nutshell
+
+| | |
+|---|---|
+| Firewall-Regeln | **200.000+** nftables-Regeln, autogeneriert |
+| DHCP-Config | **700.000 Zeilen**, 6.800 Subnetze |
+| Switches | **~300** an 30 Wohnheimstandorten |
+| Storage | **100 TiB** Ceph-Cluster, 3 Standorte |
+| DNS | BGP-Anycast-Resolver |
+
+Alles generiert aus **einer PostgreSQL-Datenbank**.
+---
 
 # Montag oder Donnerstag, 18 Uhr, NOC-Abend
 
@@ -108,7 +130,6 @@ Ein dritter debuggt per SSH einen Switch in einem Keller am anderen Ende der Sta
 Mitglieder kommen zum persönlichen Support vorbei.
 
 Und im Hintergrund füllt sich die Ticket-Queue.
-
 ---
 
 <style scoped>
@@ -236,32 +257,7 @@ Fix über **14 JunOS-Versionen**. In Junipers "stable" **Firmware**.
 
 ---
 
-# Selfnet in a Nutshell
-
-| | |
-|---|---|
-| Firewall-Regeln | **200.000+** nftables-Regeln, autogeneriert |
-| DHCP-Config | **700.000 Zeilen**, 6.800 Subnetze |
-| Switches | **~300** an 30 Wohnheimstandorten |
-| Storage | **100 TiB** Ceph-Cluster, 3 Standorte |
-| DNS | BGP-Anycast-Resolver |
-
-Alles generiert aus **einer PostgreSQL-Datenbank**.
-
----
-
-# L3 by Design
-
-Jeder Nutzer bekommt ein **/28-Subnetz**. Nicht eine IP - ein Subnetz.
-
-Alle Geräte NATten auf **eine externe IPv4**.
-Statisches Mapping. Kein Connection-Logging nötig.
-
-So können wir Abuse zuordnen, ohne zu beobachten, was Leute tun.
-
----
-
-# Alle Switches tauschen
+# Switches tauschen
 
 **260 Switches.** 30 Wohnheimstandorte. 6 Städte.
 
@@ -298,9 +294,8 @@ Halterungen von Hand schweißen.
 
 ---
 
-# Proudly Made without Cloud
+# Wir suchen Ehrenämtler, keine Fachkräfte.
 
-"Wir suchen Ehrenämtler, keine Fachkräfte."
 ≠ immer die einfachsten Wege
 
 Keine Cloudprodukte in der Technik.
@@ -308,9 +303,8 @@ Aus Prinzip souveräne Infrastruktur.
 
 ---
 
-# Proudly Made without Cloud
+# Wir suchen Ehrenämtler, keine Fachkräfte.
 
-"Wir suchen Ehrenämtler, keine Fachkräfte."
 ≠ immer die einfachsten Wege
 
 Keine Cloudprodukte in der Technik.
@@ -323,6 +317,8 @@ Aus Prinzip souveräne Infrastruktur.
 # Die Selfnet Aktivenschaft
 
 Ohne unsere aktiven Mitglieder würde das Netz nicht mehr laufen.
+
+> # **Dafür Danke!**
 
 ---
 
@@ -355,4 +351,5 @@ Ohne unsere aktiven Mitglieder würde das Netz nicht mehr laufen.
 # indem man eins betreibt
 
 selfnet.de · natalie@selfnet.de · nach Leon Amtmann 
+
 
